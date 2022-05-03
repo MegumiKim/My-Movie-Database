@@ -6,7 +6,7 @@ const id = params.get("id");
 
 console.log(id);
 
-const url = `http://www.omdbapi.com/?apikey=f9d54557&i=${id}`;
+const url = `http://www.omdbapi.com/?apikey=f9d54557&i=${id}&plot=full`;
 
 async function fetchFilm() {
   try {
@@ -27,14 +27,14 @@ fetchFilm();
 function createHtml(details) {
   title.innerHTML = "My Films | " + details.Title;
   container.innerHTML = `
-  <img class="image" src='${details.Poster}' /img>
-  <div class='description'>
   <h1>${details.Title}</h1>
+  <img class="image" src="${details.Poster}" alt="${details.Title}" /img>
+  <div class='description'>
   <p>Year: ${details.Year}</p>
   <p>Genre: ${details.Genre}</p>
   <p>Rating: ${details.imdbRating} / 10</p>
   <p>Language: ${details.Language}</p>
-  <p>${details.Plot}</p>
+  <p class='plot'>${details.Plot}</p>
   </div>
 
   `;
