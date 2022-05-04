@@ -1,3 +1,5 @@
+import { addToWatchlist } from "./addToWatchlist.js";
+
 const container = document.querySelector(".film-container");
 const title = document.querySelector("title");
 const queryString = document.location.search;
@@ -13,12 +15,15 @@ async function fetchFilm() {
     const response = await fetch(url);
     const details = await response.json();
 
-    console.log(details);
+    // console.log(details);
 
     createHtml(details);
   } catch (error) {
     console.log(error);
-    container.innerHTML = message("error", error);
+    container.innerHTML = displayMessage(
+      "error",
+      "An error occurred while fetching data"
+    );
   }
 }
 
@@ -27,15 +32,18 @@ fetchFilm();
 function createHtml(details) {
   title.innerHTML = "My Films | " + details.Title;
   container.innerHTML = `
-  <h1>${details.Title}</h1>
-  <img class="image" src="${details.Poster}" alt="${details.Title}" /img>
+  <img class="film-image" src="${details.Poster}" alt="${details.Title}" /img>
   <div class='description'>
+  <h1>${details.Title}</h1>
   <p>Year: ${details.Year}</p>
   <p>Genre: ${details.Genre}</p>
   <p>Rating: ${details.imdbRating} / 10</p>
   <p>Language: ${details.Language}</p>
-  <p class='plot'>${details.Plot}</p>
+  <p>Actor: ${details.Actors}</p>
+  <button class='addButton'>Add To Watch List</button>
   </div>
-
+  <p class='plot'>${details.Plot}</p>
   `;
+
+  addToWatchlist();
 }

@@ -1,0 +1,19 @@
+.film-image {
+  margin: 1em auto;
+}
+
+.plot,
+.description {
+  margin: 1em;
+  line-height: 25px;
+}
+
+.film-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 1em auto;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  padding: 5%;
+}

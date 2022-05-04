@@ -1,0 +1,44 @@
+form {
+  max-width: 400px;
+  margin: 10% auto;
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+input {
+  height: 30px;
+}
+
+textarea {
+  height: 100px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  background: rgb(8, 8, 8);
+  margin: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.success {
+  border: green solid 5px;
+  padding: 10px;
+}
+
+.form-error {
+  color: red;
+}
+* {
+  box-sizing: content-box;
+}

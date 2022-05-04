@@ -8,17 +8,22 @@
     <title>News Headlines</title>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <h1>My Movie Database</h1>
-    <label for="search">Type the title of the film</label>
-    <input type="text" id="search" placeholder="ex. godfather" />
-    <div class="container">
-      <div class="loader"></div>
-    </div>
-
+    <main>
+      <nav>
+        <a href="/">Home</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <h1>My Movie Database</h1>
+      <div class="search">
+        <label for="search">Search by movie title</label>
+        <input type="text" id="search" placeholder="ex. godfather" />
+      </div>
+      <div class="container">
+        <div class="loader"></div>
+      </div>
+    </main>
+    <footer>My Movie Database</footer>
+    <script src="/js/displayMessage.js"></script>
     <script src="/js/index.js"></script>
   </body>
 </html>
