@@ -21,3 +21,13 @@
 .addedButton {
   background-color: grey;
 }
+
+.add-to-watch {
+  display: flex;
+  align-items: center;
+}
+
+.add-to-watch p {
+  font-weight: bold;
+  color: rgb(51, 50, 50);
+}

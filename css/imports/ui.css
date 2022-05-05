@@ -1,17 +1,18 @@
 .error,
-.success {
+.success,
+.neutral {
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   margin: 1em auto;
   padding: 1em;
   border-radius: 5px;
+  /* max-width: 300px; */
 }
 
 .error {
   color: darkred;
   border: darkred 2px solid;
-
   background: rgb(249, 217, 217);
 }
 .success {
@@ -20,7 +21,10 @@
   background: rgb(222, 248, 222);
 }
 
-.fa-solid {
+.user-message {
+  margin-left: 20px;
+}
+.fa-spinner {
   margin: auto;
   font-size: 4em;
   color: grey;
@@ -34,4 +38,8 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.fa-circle-plus {
+  font-size: 2em;
 }

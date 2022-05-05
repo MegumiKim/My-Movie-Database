@@ -36,7 +36,10 @@ function createHtml(details) {
   <p>Language: ${details.Language}</p>
   <p>Director: ${details.Director}</p>
   <p>Actor: ${details.Actors}</p>
-  <button class='addButton' data-id='${id}' data-name='${details.Title}'>Add To Watch List</button>
+  <div class='add-to-watch'><p>Add to Watch List</p>
+  <button class='addButton' data-id='${id}' data-name='${details.Title}'>
+  <i class="fa-solid fa-circle-plus"></i>
+  </button></div>
   </div>
   <p class='plot'>${details.Plot}</p>
   `;
