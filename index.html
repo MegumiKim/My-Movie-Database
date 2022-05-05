@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/175ecb4e25.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>News Headlines</title>
   </head>
   <body>
     <main>
       <nav>
-        <a href="/">Home</a>
+        <a href="/" class="current">Home</a>
+        <a href="watchlist.html">My Watch List</a>
         <a href="contact.html">Contact</a>
       </nav>
       <h1>My Movie Database</h1>
@@ -19,11 +24,11 @@
         <input type="text" id="search" placeholder="ex. godfather" />
       </div>
       <div class="container">
-        <div class="loader"></div>
+        <i class="fa-solid fa-spinner"></i>
       </div>
     </main>
     <footer>My Movie Database</footer>
-    <script src="/js/displayMessage.js"></script>
+    <script src="/js/utils/displayMessage.js"></script>
     <script src="/js/index.js"></script>
   </body>
 </html>

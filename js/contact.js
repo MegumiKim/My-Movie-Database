@@ -10,7 +10,7 @@ const subjectError = document.querySelector(".subject-error");
 const addressError = document.querySelector(".address-error");
 const emailError = document.querySelector(".email-error");
 const errorMessage = document.querySelectorAll(".form-error");
-const textsError = document.querySelectorAll(".texts-error");
+const textsError = document.querySelector(".texts-error");
 
 form.addEventListener("submit", submitForm);
 
@@ -27,7 +27,7 @@ function validateForm(event) {
   if (checkInputLength(userName, 2, nameError));
   if (checkInputLength(subject, 10, subjectError));
   if (checkInputLength(address, 25, addressError));
-  if (checkInputLength(texts, 25, textsError));
+  if (checkInputLength(texts, 5, textsError));
   if (validateEmail(email.value)) {
     return true;
   }
@@ -38,7 +38,7 @@ function checkInputLength(inputField, len, errorField) {
   if (inputField.value.trim().length > len) {
     return true;
   } else {
-    errorField.innerHTML = `please input minimum ${len} characters`;
+    errorField.innerHTML = `Please input minimum ${len} characters`;
     return false;
   }
 }
@@ -49,6 +49,6 @@ function validateEmail(email) {
   if (patternMaches) {
     return true;
   } else {
-    emailError.innerHTML = "please input valid email address";
+    emailError.innerHTML = "Please input valid email address";
   }
 }

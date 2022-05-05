@@ -6,7 +6,7 @@ body {
 body {
   margin: 0;
   background-color: rgb(230, 226, 226);
-  font-family: sans-serif;
+  font-family: Geneva, Tahoma, sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
@@ -17,16 +17,18 @@ footer {
   text-align: center;
   font-size: 1.2em;
   padding: 1em 0;
+  margin-top: 2em;
 }
 
-h1 {
+h1,
+h2 {
+  font-family: tahoma, sans-serif;
   text-align: center;
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .container {
   display: flex;
-  /* flex-direction: column; */
   flex-flow: row wrap;
   margin: auto;
 }
@@ -43,11 +45,12 @@ a {
 
 .film {
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: 260px;
   margin: 1rem;
   background-color: white;
-  padding: 2em;
+  padding: 1em;
   border-radius: 10px;
 }
 
@@ -59,31 +62,28 @@ a {
 .search {
   align-items: center;
   margin: auto;
-  display: flex;
-  flex-direction: column;
   width: 60%;
+  margin-bottom: 1em;
 }
 .search label {
   font-size: 1.2em;
   align-self: flex-start;
+  margin-bottom: 10px;
 }
+
 #search {
   height: 2em;
-  border: 3px solid rgb(63, 63, 63);
+  border: 3px solid rgb(120, 120, 120);
   border-radius: 5px;
   padding: 5px;
   width: 100%;
 }
 
-.loader {
-  border: 16px solid #faf6f6;
-  border-top: 16px solid rgb(6, 6, 6);
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  animation: spin 3s linear infinite;
-  margin-left: 50%;
-  transform: translateX(-50%);
+.fa-solid {
+  margin: auto;
+  font-size: 4em;
+  color: grey;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -99,24 +99,49 @@ nav a {
   font-weight: bold;
   padding: 10px;
 }
+
 nav {
   font-size: 1.2em;
   margin: 1em;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .current {
   text-decoration: underline;
 }
 
-.error {
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 30px;
+  background: rgb(8, 8, 8);
+  margin: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background: grey;
+}
+
+.error,
+.success {
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   margin: 1em auto;
   padding: 1em;
+  border-radius: 5px;
+}
+
+.error {
   color: darkred;
   border: darkred 2px solid;
-  border-radius: 5px;
-  background: white;
+
+  background: rgb(249, 217, 217);
+}
+.success {
+  color: darkgreen;
+  border: green solid 2px;
+  background: rgb(222, 248, 222);
 }

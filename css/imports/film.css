@@ -17,3 +17,7 @@
   border-radius: 5px;
   padding: 5%;
 }
+
+.addedButton {
+  background-color: grey;
+}
