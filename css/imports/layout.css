@@ -79,21 +79,7 @@ a {
   width: 100%;
 }
 
-.fa-solid {
-  margin: auto;
-  font-size: 4em;
-  color: grey;
-  animation: spin 2s linear infinite;
-}
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 nav a {
   font-weight: bold;
@@ -110,6 +96,7 @@ nav {
   text-decoration: underline;
 }
 
+
 button {
   border: none;
   border-radius: 10px;
@@ -124,24 +111,3 @@ button:hover {
   background: grey;
 }
 
-.error,
-.success {
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  margin: 1em auto;
-  padding: 1em;
-  border-radius: 5px;
-}
-
-.error {
-  color: darkred;
-  border: darkred 2px solid;
-
-  background: rgb(249, 217, 217);
-}
-.success {
-  color: darkgreen;
-  border: green solid 2px;
-  background: rgb(222, 248, 222);
-}
