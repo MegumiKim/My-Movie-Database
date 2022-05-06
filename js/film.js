@@ -4,7 +4,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const title = document.querySelector("title");
-const url = `http://www.omdbapi.com/?apikey=f9d54557&i=${id}&plot=full`;
+const url = `https://www.omdbapi.com/?apikey=f9d54557&i=${id}&plot=full`;
 
 async function fetchFilm() {
   try {

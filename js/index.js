@@ -3,7 +3,7 @@ const search = document.querySelector("#search");
 
 async function fetchFilms(search) {
   try {
-    var url = `http://www.omdbapi.com/?apikey=f9d54557&s=${search}`;
+    var url = `https://www.omdbapi.com/?apikey=f9d54557&s=${search}`;
     const response = await fetch(url);
     const json = await response.json();
     const films = json.Search;
