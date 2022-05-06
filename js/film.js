@@ -26,21 +26,19 @@ fetchFilm();
 function createHtml(details) {
   console.log(details);
   title.innerHTML = "My Films | " + details.Title;
-  container.innerHTML = `
-  <img class="film-image" src="${details.Poster}" alt="${details.Title}" /img>
-  <div class='description'>
-  <h1>${details.Title}</h1>
-  <p>Year: ${details.Year}</p>
-  <p>Genre: ${details.Genre}</p>
-  <p>Rating: ${details.imdbRating} / 10</p>
-  <p>Language: ${details.Language}</p>
-  <p>Director: ${details.Director}</p>
-  <p>Actor: ${details.Actors}</p>
-  <div class='add-to-watch'><p>Add to Watch List</p>
-  <button class='addButton' data-id='${id}' data-name='${details.Title}'>
-  <i class="fa-solid fa-circle-plus"></i>
-  </button></div>
-  </div>
-  <p class='plot'>${details.Plot}</p>
-  `;
+  container.innerHTML = `<img class="film-image" src="${details.Poster}" alt="${details.Title}" /img>
+                          <div class='description'>
+                          <h1>${details.Title}</h1>
+                          <p>Year: ${details.Year}</p>
+                          <p>Genre: ${details.Genre}</p>
+                          <p>Rating: ${details.imdbRating} / 10</p>
+                          <p>Language: ${details.Language}</p>
+                          <p>Director: ${details.Director}</p>
+                          <p>Actor: ${details.Actors}</p>
+                          <div class='add-to-watch'>
+                          <i class="fa-solid fa-circle-plus" data-id='${id}' data-name='${details.Title}'></i>
+                          <p>Add to Watch List</p></div>
+                          </div>
+                          <p class='plot'>${details.Plot}</p>
+                          `;
 }

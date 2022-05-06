@@ -7,7 +7,6 @@
   margin: 1em auto;
   padding: 1em;
   border-radius: 5px;
-  /* max-width: 300px; */
 }
 
 .error {
@@ -21,8 +20,15 @@
   background: rgb(222, 248, 222);
 }
 
+.neutral {
+  border: var(--black) solid 2px;
+  background: white;
+}
+
 .user-message {
   margin-left: 20px;
+  max-width: 400px;
+  margin: auto;
 }
 .fa-spinner {
   margin: auto;
@@ -40,6 +46,22 @@
   }
 }
 
-.fa-circle-plus {
+.fa-circle-plus,
+.fa-circle-minus {
   font-size: 2em;
+  color: var(--black);
+  background: none;
+  padding: 0;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.fa-circle-plus:hover,
+.fa-circle-minus:hover {
+  color: grey;
+  background-color: white;
+}
+
+.fa-circle-minus {
+  color: rgb(245, 198, 112);
 }

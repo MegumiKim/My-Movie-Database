@@ -1,9 +1,10 @@
 import { getWatchList } from "./getWatchList.js";
 
 export function handleClick(event) {
-  this.classList.toggle("addButton");
-  this.classList.toggle("addedButton");
+  this.classList.toggle("fa-circle-plus");
+  this.classList.toggle("fa-circle-minus");
 
+  console.log(this);
   const id = this.dataset.id;
   const name = this.dataset.name;
 

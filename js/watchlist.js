@@ -1,31 +1,27 @@
 import { getWatchList } from "./utils/getWatchList.js";
-import { handleClick } from "./utils/handleClick.js";
+import { removeFromWatchList } from "./utils/addToWatchList.js";
 
 const myWatchList = getWatchList();
 const container = document.querySelector(".container");
 const userMessage = document.querySelector(".user-message");
 
 if (!myWatchList.length) {
-  userMessage.innerHTML = displayMessage("error", "No Item in the Watch List");
+  userMessage.innerHTML = displayMessage("neutral", "No Item in My Watch List");
 } else {
   userMessage.innerHTML = displayMessage(
     "neutral",
-    "Refresh the page after removing each item"
+    "Please refresh the page after removing each item"
   );
 }
 
 myWatchList.forEach((film) => {
   container.innerHTML += `<div class="film">
-  <h4>${film.name}</h4>
-  <button class='remove' data-id='${film.id}'>
-  <i class="fa-solid fa-circle-plus"></i>
-  </button>
-  </div>`;
+                          <h4>${film.name}</h4>
+                          <div class='remove-box'>
+                        
+                          <i class="fa-solid fa-circle-plus" data-id='${film.id}'></i>
+                          Remove</div>
+                          </div>`;
 });
-
-function removeFromWatchList() {
-  const remove = document.querySelector(".remove");
-  remove.addEventListener("click", handleClick);
-}
 
 removeFromWatchList();

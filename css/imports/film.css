@@ -13,13 +13,9 @@
   flex-wrap: wrap;
   max-width: 800px;
   margin: 1em auto;
-  background-color: #f3f3f3;
+  background-color: white;
   border-radius: 5px;
   padding: 5%;
-}
-
-.addedButton {
-  background-color: grey;
 }
 
 .add-to-watch {
@@ -29,5 +25,4 @@
 
 .add-to-watch p {
   font-weight: bold;
-  color: rgb(51, 50, 50);
 }

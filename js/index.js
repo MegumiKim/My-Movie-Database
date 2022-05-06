@@ -15,12 +15,11 @@ async function fetchFilms(search) {
     let content = "";
     films.forEach((film) => {
       content += `
-   
-        <a href="film.html?id=${film.imdbID}" class='film'> 
-        <h2>${film.Title}</h2>
-        <div>Year: ${film.Year}</div>
-        <img class='image' src='${film.Poster}' alt='${film.Title}' />
-        </a>`;
+                  <a href="film.html?id=${film.imdbID}" class='film'> 
+                  <h2>${film.Title}</h2>
+                  <div>Year: ${film.Year}</div>
+                  <img class='image' src='${film.Poster}' alt='${film.Title}' />
+                  </a>`;
     });
     container.innerHTML = content;
   } catch (e) {
@@ -35,7 +34,5 @@ async function fetchFilms(search) {
 fetchFilms("Godfather");
 
 search.addEventListener("keyup", function (event) {
-  console.log(this.value);
-
   fetchFilms(this.value);
 });

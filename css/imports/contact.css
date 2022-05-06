@@ -1,5 +1,5 @@
 form {
-  max-width: 400px;
+  max-width: 300px;
   margin: 1em auto;
   background-color: white;
   padding: 1em 4em;
@@ -8,23 +8,25 @@ form {
   flex-flow: column wrap;
 }
 
-input {
-  border-radius: 10px;
-  height: 30px;
-}
+input,
 textarea {
+  height: 30px;
   border-radius: 10px;
-  height: 100px;
+  border: 2px solid var(--light-grey);
 }
 
+textarea {
+  height: 100px;
+}
 label {
   display: block;
   margin: 20px 0 10px 0;
 }
 
 .form-error {
-  color: rgb(171, 2, 2);
+  color: darkred;
 }
+
 * {
   box-sizing: content-box;
 }
