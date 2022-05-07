@@ -24,8 +24,7 @@ async function fetchFilm() {
 fetchFilm();
 
 function createHtml(details) {
-  console.log(details);
-  title.innerHTML = "My Films | " + details.Title;
+  document.title = "MMDb | " + details.Title;
   container.innerHTML = `<img class="film-image" src="${details.Poster}" alt="${details.Title}" /img>
                           <div class='description'>
                           <h1>${details.Title}</h1>

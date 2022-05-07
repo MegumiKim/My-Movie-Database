@@ -1,5 +1,6 @@
 import { getWatchList } from "./utils/getWatchList.js";
 import { removeFromWatchList } from "./utils/addToWatchList.js";
+// import { fetchPoster } from "./utils/fetchPoster.js";
 
 const myWatchList = getWatchList();
 const container = document.querySelector(".container");
@@ -18,7 +19,6 @@ myWatchList.forEach((film) => {
   container.innerHTML += `<div class="film">
                           <h4>${film.name}</h4>
                           <div class='remove-box'>
-                        
                           <i class="fa-solid fa-circle-plus" data-id='${film.id}'></i>
                           Remove</div>
                           </div>`;
