@@ -1,6 +1,6 @@
 import { getWatchList } from "./utils/getWatchList.js";
 import { removeFromWatchList } from "./utils/addToWatchList.js";
-// import { fetchPoster } from "./utils/fetchPoster.js";
+import { fetchPoster } from "./utils/fetchPoster.js";
 
 const myWatchList = getWatchList();
 const container = document.querySelector(".container");
@@ -15,13 +15,15 @@ if (!myWatchList.length) {
   );
 }
 
-myWatchList.forEach((film) => {
+myWatchList.forEach(async function (film) {
+  const poster = await fetchPoster(film);
   container.innerHTML += `<div class="film">
+                          <img class='image' src='${poster}' /img>
                           <h4>${film.name}</h4>
                           <div class='remove-box'>
                           <i class="fa-solid fa-circle-plus" data-id='${film.id}'></i>
                           Remove</div>
                           </div>`;
-});
 
-removeFromWatchList();
+  removeFromWatchList();
+});
