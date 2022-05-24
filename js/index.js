@@ -1,17 +1,35 @@
 const container = document.querySelector(".container");
 const search = document.querySelector("#search");
 
+let cache = sessionStorage.getItem("cache");
+cache = cache ? JSON.parse(cache) : {};
+// if (cache) {
+//   cache = JSON.parse(cache);
+// } else {
+//   cache = {};
+// }
+
 async function fetchFilms(search) {
   try {
-    var url = `https://www.omdbapi.com/?apikey=f9d54557&s=${search}`;
-    const response = await fetch(url);
-    const json = await response.json();
-    const films = json.Search;
-    console.log(json);
+    let films = [];
+    if (!cache[search]) {
+      console.log("Fetching");
+      const url = `https://www.omdbapi.com/?apikey=f9d54557&s=${search}`;
+      const response = await fetch(url);
+      const json = await response.json();
+      films = json.Search;
+      cache[search] = films;
+      sessionStorage.setItem("cache", JSON.stringify(cache));
+    } else {
+      console.log("Using cache");
+      films = cache[search];
+    }
+
     if (!films) {
       container.innerHTML = displayMessage("error", "No Film Found");
       return;
     }
+
     let content = "";
     films.forEach((film) => {
       content += `
