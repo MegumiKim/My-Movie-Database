@@ -5,7 +5,7 @@ Personal mini project to practice calling API
 ## Description
 
 - A simple website where a user can search a film by title
-- Return a detailed description of a film
+- Return list of films and a detailed description of a specific film
 - A user can add/remove films in Watch List
 
 ## Built with 
@@ -13,10 +13,10 @@ Personal mini project to practice calling API
 - CSS
 - JS
 
-##Source
+## Source
 https://www.omdbapi.com/
 
-### Installing
+## Getting Started
 
 Clone the repo:
 
