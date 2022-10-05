@@ -1,0 +1,23 @@
+header {
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 5rem;
+}
+
+nav a {
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav {
+  font-size: 1.2em;
+}
+
+.current {
+  text-decoration: underline;
+}

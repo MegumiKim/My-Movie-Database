@@ -39,6 +39,7 @@ async function fetchFilms(search) {
                   <img class='image' src='${film.Poster}' alt='${film.Title}' />
                   </a>`;
     });
+    window.location.href = "/search-results.html";
     container.innerHTML = content;
   } catch (e) {
     console.log(e);
@@ -49,8 +50,8 @@ async function fetchFilms(search) {
   }
 }
 
-fetchFilms("Godfather");
+// fetchFilms("Godfather");
 
-search.addEventListener("keyup", function (event) {
+search.addEventListener("blur", function (event) {
   fetchFilms(this.value);
 });

@@ -1,5 +1,7 @@
 @import "imports/variables.css";
 @import "imports/layout.css";
 @import "imports/ui.css";
+@import "imports/header.css";
 @import "imports/contact.css";
 @import "imports/film.css";
+@import "imports/welcome.css";

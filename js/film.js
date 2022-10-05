@@ -1,5 +1,5 @@
 import { addToWatchList } from "./utils/addToWatchList.js";
-const container = document.querySelector(".film-container");
+const container = document.querySelector(".container");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");

@@ -1,0 +1,38 @@
+.welcome {
+  background-image: url("../../img/gr-stocks-q8P8YoR6erg-unsplash.webp");
+
+  background-size: cover;
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.search-wrapper {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search {
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.search label {
+  font-size: 1.2em;
+  align-self: flex-start;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--black);
+  height: 2em;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
