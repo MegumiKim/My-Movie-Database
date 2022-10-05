@@ -1,2 +1,2 @@
-const displayMessage = (type = "error", message = "Unknown Error") =>
+export const displayMessage = (type = "error", message = "Unknown Error") =>
   `<div class='${type}'>${message}</div>`;
