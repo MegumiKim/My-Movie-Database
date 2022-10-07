@@ -13,18 +13,36 @@
     <title>Search Results | MMdb</title>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="watchlist.html">My Watch List</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+      <a href="/" class="logo">MMdb</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="watchlist.html">My Watch List</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
     <main>
-      <div class="container">
-        <i class="fa-solid fa-spinner"></i>
+      <div class="sort-box">
+        <label for="title-input">Title</label>
+        <input type="text" class="input-text" id="title-input" />
+        <label for="title-input">Year</label>
+        <input type="text" class="input-text" id="title-input" />
+        <label for="genre-select">Genre</label>
+        <select name="genre" id="genre-select">
+          <option value="movie">Movie</option>
+          <option value="series">Series</option>
+          <option value="episode">Episode</option>
+        </select>
+        <button class="search-btn">Search</button>
       </div>
-      <!-- <script src="/js/utils/displayMessage.js"></script>
-      <script src="/js/film.js" type="module"></script> -->
+      <div class="container-wrap">
+        <div class="container">
+          <i class="fa-solid fa-spinner"></i>
+        </div>
+      </div>
     </main>
-    <footer>My Movie Database</footer>
+    <footer>
+      <a href="https://www.omdbapi.com/">Powered by OMDb API &copy;</a>
+    </footer>
   </body>
 </html>

@@ -1,5 +1,9 @@
+import { createCard } from "./createHTMLElements/createCardHTML";
+import { fetchAPI } from "./fetchAPI";
+
 let cache = sessionStorage.getItem("cache");
 cache = cache ? JSON.parse(cache) : {};
+
 // if (cache) {
 //   cache = JSON.parse(cache);
 // } else {
@@ -14,8 +18,9 @@ async function fetchFilms(search) {
     if (!cache[search]) {
       console.log("Fetching");
       const url = `https://www.omdbapi.com/?apikey=f9d54557&s=${search}`;
-      const response = await fetch(url);
-      const json = await response.json();
+      const json = fetchAPI(url);
+      // const response = await fetch(url);
+      // const json = await response.json();
       films = json.Search;
       cache[search] = films;
       sessionStorage.setItem("cache", JSON.stringify(cache));
@@ -31,12 +36,8 @@ async function fetchFilms(search) {
     console.log(films);
     let content = "";
     films.forEach((film) => {
-      content += `
-                  <a href="film.html?id=${film.imdbID}" class='film'> 
-                  <h2>${film.Title}</h2>
-                  <div>Year: ${film.Year}</div>
-                  <img class='image' src='${film.Poster}' alt='${film.Title}' />
-                  </a>`;
+      const film = createCard(film);
+      content += film;
     });
     container.innerHTML = content;
   } catch (e) {

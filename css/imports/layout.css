@@ -8,6 +8,9 @@ body {
   /* max-width: 1000px; */
 }
 
+main {
+  background-color: var(--color_yellow);
+}
 footer {
   background: white;
   text-align: center;
@@ -21,38 +24,14 @@ h2 {
   margin: 0.5em;
 }
 
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  margin: auto;
-  padding: 1em;
-  justify-content: center;
-}
-
 .image {
-  max-width: 200px;
+  max-width: 100%;
   margin: 1em auto;
 }
 
 a {
   text-decoration: none;
   color: var(--black);
-}
-
-.film {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 260px;
-  margin: 1rem;
-  background-color: white;
-  padding: 1em;
-  border-radius: 10px;
-}
-
-.title {
-  font-size: 1.2em;
-  font-weight: bold;
 }
 
 button {
@@ -67,8 +46,4 @@ button {
 
 button:hover {
   background: grey;
-}
-
-.mini-poster {
-  max-width: 100px;
 }

@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="/js/index.js" type="module"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>MMDb | Home</title>
   </head>
@@ -20,25 +21,21 @@
         <a href="contact.html">Contact</a>
       </nav>
     </header>
-
     <main class="welcome">
       <div class="search-wrapper">
         <h1>Welcome to My Movie Database</h1>
         <div class="search">
           <label for="search">Search by movie title</label>
-          <input
-            type="text"
-            id="search"
-            placeholder="What do you want to watch?"
-          />
+          <input type="text" id="search" placeholder="type keyword" />
         </div>
       </div>
-      <div class="container">
-        <!-- <i class="fa-solid fa-spinner"></i> -->
-      </div>
+      <!-- <div class="container">
+        <i class="fa-solid fa-spinner"></i>
+      </div> -->
     </main>
-    <footer>My Movie Database &copy;</footer>
-    <script src="/js/utils/displayMessage.js"></script>
-    <script src="/js/index.js"></script>
+    <footer>
+      <a href="https://www.omdbapi.com/">Powered by OMDb API &copy;</a>
+    </footer>
+    <!-- <script src="/js/utils/displayMessage.js"></script> -->
   </body>
 </html>
