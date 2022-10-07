@@ -11,11 +11,17 @@
 .film-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 1em auto;
   background-color: white;
   border-radius: 5px;
   padding: 5%;
+  gap: 2rem;
+}
+
+.plot {
+  font-size: 1.5rem;
+  line-height: 1.7;
 }
 
 .add-to-watch {
@@ -35,6 +41,7 @@
 .title-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: baseline;
   gap: 20px;
@@ -53,7 +60,11 @@ h1 {
 }
 
 @media (min-width: 800px) {
-  .film-container {
+  /* .film-container {
+    flex-direction: row;
+  } */
+  .img-description-wrap {
+    display: flex;
     flex-direction: row;
   }
 }

@@ -3,7 +3,8 @@ const container = document.querySelector(".film-container");
 
 export function createHtml(details, id) {
   document.title = "MMDb | " + details.Title;
-  container.innerHTML = `<img class="film-image" src="${details.Poster}" alt="${details.Title}" /img>
+  container.innerHTML = `<div class='img-description-wrap'>
+  <img class="film-image" src="${details.Poster}" alt="${details.Title}" /img>
                           <div class='description'>
                           <div class='title-wrapper'>
                           <h1>${details.Title}</h1>
@@ -28,7 +29,7 @@ export function createHtml(details, id) {
                           <div class='add-to-watch'>
                           <i class="fa-solid fa-circle-plus" data-id='${id}' data-name='${details.Title}'></i>
                           <p>Add to Watch List</p></div>
-                          </div></div>
+                          </div></div></div>
                           <p class='plot'>${details.Plot}</p>
                           `;
 }

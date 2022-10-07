@@ -22,18 +22,23 @@
       </nav>
     </header>
     <main>
-      <div class="sort-box">
-        <label for="title-input">Title</label>
-        <input type="text" class="input-text" id="title-input" />
-        <label for="title-input">Year</label>
-        <input type="text" class="input-text" id="title-input" />
-        <label for="genre-select">Genre</label>
-        <select name="genre" id="genre-select">
-          <option value="movie">Movie</option>
-          <option value="series">Series</option>
-          <option value="episode">Episode</option>
-        </select>
-        <button class="search-btn">Search</button>
+      <div class="filter">
+        <h2>Filter search</h2>
+        <div class="sort-box">
+          <label for="title-input">Title</label>
+          <input type="text" class="input-text" id="title-input" />
+          <label for="year-input">Year</label>
+          <input type="text" class="input-text" id="year-input" />
+          <label for="genre-select">Genre</label>
+          <select name="genre" id="genre-select">
+            <option value="" disabled selected>Select Category</option>
+            <option value="">All</option>
+            <option value="movie">Movie</option>
+            <option value="series">Series</option>
+            <option value="episode">Episode</option>
+          </select>
+          <button class="search-btn">Search</button>
+        </div>
       </div>
       <div class="container-wrap">
         <div class="container">

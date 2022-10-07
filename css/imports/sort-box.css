@@ -1,8 +1,23 @@
 .sort-box {
   display: flex;
   padding: 1rem;
+  gap: 1rem;
+  /* justify-content: space-around; */
+}
+select {
+  height: 2rem;
 }
 
-.seach-btn {
+.search-btn {
   margin: 0;
+  padding: 0;
+}
+
+.filter h2 {
+  text-align: left;
+}
+
+.filter {
+  border: 1px solid black;
+  margin: 2rem;
 }

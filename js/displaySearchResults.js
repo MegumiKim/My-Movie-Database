@@ -2,6 +2,7 @@ import { createCard } from "./createHTMLElements/createCardHTML.js";
 import { fetchAPI } from "./fetchAPI.js";
 import { displayMessage } from "./utils/displayMessage.js";
 
+import { filterSearch } from "./utils/filterSearch.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const searchTerm = params.get("search");
@@ -47,6 +48,9 @@ async function fetchFilms(search) {
 }
 
 fetchFilms(searchTerm);
+
+const searchBtn = document.querySelector(".search-btn");
+searchBtn.addEventListener("click", filterSearch);
 
 // import { createCard } from "./createHTMLElements/createCardHTML.js";
 // import { fetchAPI } from "./fetchAPI.js";
