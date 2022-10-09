@@ -18,7 +18,7 @@ export async function filterSearch() {
 
     const response = await fetch(newURL);
     const json = await response.json();
-    // const films = json.Search;
+    const films = json.Search;
 
     container.innerHTML = "";
     films.forEach((film) => {
