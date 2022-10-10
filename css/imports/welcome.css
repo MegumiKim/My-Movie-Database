@@ -30,7 +30,7 @@
   border: 2px solid var(--black);
   height: 2em;
   border-radius: 5px;
-  padding: 5px;
+  /* padding: 5px; */
   width: 100%;
 }
 

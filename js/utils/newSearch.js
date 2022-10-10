@@ -6,7 +6,7 @@ const typeSelect = document.querySelector("#genre-select");
 const baseURL = `https://www.omdbapi.com/?apikey=f9d54557`;
 const container = document.querySelector(".container");
 
-export async function filterSearch() {
+export async function newSearch() {
   try {
     const titleParam = getTitleParam();
     const yearParam = getYearParam();

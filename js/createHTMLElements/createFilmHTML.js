@@ -1,4 +1,4 @@
-import { createElement } from "./createElement.js";
+// import { createElement } from "./createElement.js";
 const container = document.querySelector(".film-container");
 
 export function createHtml(details, id) {
@@ -8,7 +8,7 @@ export function createHtml(details, id) {
                           <div class='description'>
                           <div class='title-wrapper'>
                           <h1>${details.Title}</h1>
-                          <p class='rating'>${details.imdbRating} / 10</p></div>
+                          <p class='rating'> 	&#11088; ${details.imdbRating} / 10</p></div>
                           <div class='text-wrapper'>
                           <div>
                           <h2>Year</h2>
@@ -16,16 +16,20 @@ export function createHtml(details, id) {
                           </div>
                           <div>
                           <h2>Genre</h2>
-                          <p>Genre: ${details.Genre}</p>
+                          <p>${details.Genre}</p>
                           </div>
                           <div>
                           <h2>Language</h2>
-                          <p>Language: ${details.Language}</p>
+                          <p> ${details.Language}</p>
                           </div>
-                          <div><h2>Director</h2>
-                          <p>Director: ${details.Director}</p></div>
-                          <div><h2>Actor</h2>
-                          <p>Actor: ${details.Actors}</p></div>
+                          <div>
+                          <h2>Director</h2>
+                          <p>${details.Director}</p>
+                          </div>
+                          <div>
+                          <h2>Actor</h2>
+                          <p>${details.Actors}</p>
+                          </div>
                           <div class='add-to-watch'>
                           <i class="fa-solid fa-circle-plus" data-id='${id}' data-name='${details.Title}'></i>
                           <p>Add to Watch List</p></div>

@@ -46,23 +46,6 @@
   }
 }
 
-.fa-circle-plus,
-.fa-circle-minus {
-  font-size: 2em;
-  color: var(--black);
-  background: none;
-  padding: 0;
-  border-radius: 50%;
-  margin: 10px;
-  text-align: right;
-}
-
-.fa-circle-plus:hover,
-.fa-circle-minus:hover {
-  color: grey;
-  background-color: white;
-}
-
 /* .fa-circle-minus {
   color: rgb(245, 198, 112);
 } */

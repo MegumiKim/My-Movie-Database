@@ -12,7 +12,7 @@ async function fetchFilm() {
   try {
     const response = await fetch(url);
     const details = await response.json();
-    console.log(details);
+
     createHtml(details, id);
     addToWatchList();
   } catch (error) {

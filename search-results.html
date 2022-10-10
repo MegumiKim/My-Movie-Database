@@ -8,7 +8,7 @@
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="/js/displaySearchResults.js" type="module"></script>
+    <script defer src="/js/searchResults.js" type="module"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>Search Results | MMdb</title>
   </head>
@@ -22,11 +22,49 @@
       </nav>
     </header>
     <main>
-      <div class="filter">
-        <h2>Filter search</h2>
-        <div class="sort-box">
-          <label for="title-input">Title</label>
-          <input type="text" class="input-text" id="title-input" />
+      <div class="filter-wrap">
+        <div class="h2-wrap">
+          <button class="show-filters-btn">
+            <i class="fa-solid fa-circle-plus"></i>
+          </button>
+          <h2>Filter/Sort films</h2>
+        </div>
+        <div class="filters">
+          <div class="by-title">
+            <label for="filter-input">By Title</label>
+            <input type="text" name="" id="filter-input" />
+            <button class="filter-btn btn">Filter by keyword</button>
+          </div>
+          <div class="by-year">
+            <label for="filter-year">Filter by year</label>
+            <input type="text" name="" id="filter-year" />
+            <button class="newer-than-btn btn">Newer than</button>
+            <button class="older-than-btn btn">Older than</button>
+          </div>
+        </div>
+        <div class="sorts">
+          <div class="sort">
+            <button class="sort-btn btn newest">Year &uparrow;</button>
+            <button class="sort-btn btn oldest">Year &downarrow;</button>
+            <button class="sort-btn btn aToZ">A &RightArrow; Z</button>
+          </div>
+        </div>
+      </div>
+      <div class="new-search-wrap">
+        <div class="h2-wrap">
+          <button class="show-new-search-btn">
+            <i class="fa-solid fa-circle-plus"></i>
+          </button>
+          <h2>Try New Search</h2>
+        </div>
+        <div class="new-search-field">
+          <label for="title-input">*Title</label>
+          <input
+            type="text"
+            class="input-text"
+            id="title-input"
+            place-holder="*required"
+          />
           <label for="year-input">Year</label>
           <input type="text" class="input-text" id="year-input" />
           <label for="genre-select">Genre</label>
@@ -37,7 +75,7 @@
             <option value="series">Series</option>
             <option value="episode">Episode</option>
           </select>
-          <button class="search-btn">Search</button>
+          <button class="search-btn btn">Search</button>
         </div>
       </div>
       <div class="container-wrap">
