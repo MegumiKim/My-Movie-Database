@@ -8,6 +8,13 @@ button {
   margin: 0.5rem 1rem;
 }
 
+/* go back */
+.go-back-btn {
+  font-size: 1.5rem;
+  margin: 30px 0 30px 5%;
+  display: block;
+}
+
 /* filter/sort btn */
 
 .sort-btn {
@@ -24,9 +31,10 @@ button {
   background: grey;
 } */
 
-.fa-circle-plus,
-.fa-circle-minus {
-  font-size: 2em;
+.add-btn {
+  /* .fa-circle-plus,
+.fa-circle-minus { */
+  font-size: 2rem;
   color: var(--black);
   background: none;
   padding: 0;

@@ -33,6 +33,7 @@ export function createHtml(details, id) {
                           <p>${details.Actors}</p>
                           </div>`;
   // <div class='add-to-watch'>
+
   const addBtn = createElement(
     "button",
     "add-btn",
@@ -41,8 +42,11 @@ export function createHtml(details, id) {
   addBtn.setAttribute("data-id", id);
   addBtn.setAttribute("data-name", details.Title);
   addBtn.addEventListener("click", addToWatchLists);
+  const addToWrap = createElement("h2", "add-to-wrap", "Add To Watch List", [
+    addBtn,
+  ]);
   const plot = createElement("p", "plot", details.Plot);
-  container.append(addBtn, plot);
+  container.append(addToWrap, plot);
 
   // <button><i class="fa-solid fa-circle-plus" data-id='${id}' data-name='${details.Title}'></i></button>
   // <p>Add to Watch List</p></div>

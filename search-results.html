@@ -22,42 +22,44 @@
       </nav>
     </header>
     <main>
-      <div class="filter-wrap">
+      <div class="filter-box">
         <div class="h2-wrap">
           <button class="show-filters-btn">
             <i class="fa-solid fa-circle-plus"></i>
           </button>
           <h2>Filter/Sort films</h2>
         </div>
-        <div class="filters">
-          <div class="by-title">
-            <label for="filter-input">By Title</label>
-            <input type="text" name="" id="filter-input" />
-            <button class="filter-btn btn">Filter by keyword</button>
+        <div class="filter-sort-wrap hidden">
+          <div class="filters">
+            <div class="by-title">
+              <label for="filter-input">By Title</label>
+              <input type="text" name="" id="filter-input" />
+              <button class="filter-btn btn">Filter by keyword</button>
+            </div>
+            <div class="by-year">
+              <label for="filter-year">Filter by year</label>
+              <input type="text" name="" id="filter-year" />
+              <button class="newer-than-btn btn">Newer than</button>
+              <button class="older-than-btn btn">Older than</button>
+            </div>
           </div>
-          <div class="by-year">
-            <label for="filter-year">Filter by year</label>
-            <input type="text" name="" id="filter-year" />
-            <button class="newer-than-btn btn">Newer than</button>
-            <button class="older-than-btn btn">Older than</button>
-          </div>
-        </div>
-        <div class="sorts">
-          <div class="sort">
-            <button class="sort-btn btn newest">Year &uparrow;</button>
-            <button class="sort-btn btn oldest">Year &downarrow;</button>
-            <button class="sort-btn btn aToZ">A &RightArrow; Z</button>
+          <div class="sorts">
+            <div class="sort">
+              <button class="sort-btn btn newest">Year &uparrow;</button>
+              <button class="sort-btn btn oldest">Year &downarrow;</button>
+              <button class="sort-btn btn aToZ">A &RightArrow; Z</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="new-search-wrap">
+      <div class="filter-box new-search-wrap">
         <div class="h2-wrap">
           <button class="show-new-search-btn">
             <i class="fa-solid fa-circle-plus"></i>
           </button>
           <h2>Run New Search</h2>
         </div>
-        <div class="new-search-field">
+        <div class="new-search-field hidden">
           <label for="title-input">*Title</label>
           <input
             type="text"

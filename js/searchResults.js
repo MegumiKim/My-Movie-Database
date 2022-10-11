@@ -18,7 +18,8 @@ const params = new URLSearchParams(queryString);
 const searchTerm = params.get("search");
 const searchBtn = document.querySelector(".search-btn");
 const newSearchField = document.querySelector(".new-search-field");
-const filters = document.querySelector(".filters");
+const filterSortWrap = document.querySelector(".filter-sort-wrap");
+// const filters = document.querySelector(".filters");
 const container = document.querySelector(".container");
 
 let cache = sessionStorage.getItem("cache");
@@ -35,7 +36,7 @@ document
   .addEventListener("click", (event) => toggleDisplay(event, newSearchField));
 document
   .querySelector(".show-filters-btn")
-  .addEventListener("click", (event) => toggleDisplay(event, filters));
+  .addEventListener("click", (event) => toggleDisplay(event, filterSortWrap));
 
 // filter film by keyword
 

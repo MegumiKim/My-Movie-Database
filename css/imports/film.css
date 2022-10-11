@@ -22,7 +22,6 @@
   background-color: white;
   border-radius: 5px;
   padding: 5%;
-  gap: 2rem;
 }
 
 .plot {
@@ -50,7 +49,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: center;
   gap: 1.5rem;
 }
 .rating {
@@ -60,6 +59,7 @@
 h2 {
   text-align: right;
   font-size: 1.5rem;
+  padding-right: 10%;
 }
 
 h1 {
