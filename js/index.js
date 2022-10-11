@@ -1,10 +1,9 @@
+import { menuBtnFunc } from "./utils/menuBtn.js";
+
 const search = document.querySelector("#search");
+// const menuBtn = document.querySelector(".menu-btn");
 
-// search.addEventListener("blur", function (event) {
-//   window.location.href = `/search-results.html?search=${this.value}`;
-//   // fetchFilms(this.value);
-// });
-
+// menuBtn.addEventListener("click", menuBtnFunc);
 search.addEventListener("keypress", function (event) {
   if (event.keyCode === 13) {
     window.location.href = `/search-results.html?search=${this.value}`;

@@ -5,13 +5,14 @@ import {
   sortFilms,
 } from "./components/filter/sortFuncs.js";
 import { toggleDisplay } from "./utils/toggleDisplay.js";
-import { fetchFilms } from "./displaySearchResults.js";
+import { fetchFilms } from "./fetchFilms.js";
 import { renderCards } from "./createHTMLElements/renderCards.js";
 import {
   filterFilms,
   filterNewerThan,
   filterOlderThan,
 } from "./components/filter/filterFilms.js";
+import { menuBtnFunc } from "./utils/menuBtn.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

@@ -7,6 +7,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const title = document.querySelector("title");
 const url = `https://www.omdbapi.com/?apikey=f9d54557&i=${id}&plot=full`;
+import { menuBtnFunc } from "./utils/menuBtn.js";
 
 async function fetchFilm() {
   try {

@@ -1,6 +1,7 @@
 import { getWatchList } from "./components/watchList/getWatchList.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import { createWatchCardHTML } from "./createHTMLElements/createWatchCardHTML.js";
+import { menuBtnFunc } from "./utils/menuBtn.js";
 
 const container = document.querySelector(".container");
 const userMessage = document.querySelector(".user-message");

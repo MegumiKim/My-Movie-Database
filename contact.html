@@ -10,6 +10,7 @@
   <body>
     <header>
       <a href="/" class="logo">MMdb</a>
+      <div class="menu-btn"><div class="menu-btn__burger"></div></div>
       <nav>
         <a href="/">Home</a>
         <a href="watchlist.html">My Watch List</a>
@@ -17,10 +18,72 @@
       </nav>
     </header>
     <main>
-      <h1>Contact Us</h1>
-      <h2>I would LOVE to hear from you.</h2>
-      <h2>Tell me what's your favorite movie?</h2>
-      <form id="contact-form">
+      <section class="contact">
+        <h1>Contact</h1>
+        <div class="contact-greetings">
+          <p>Hello film lovers!</p>
+          <p>Please send feedback/suggestion for future improvements.</p>
+          <p>
+            Or what's your favorite movie? I would LOVE to hear from you :-)
+          </p>
+        </div>
+      </section>
+      <section>
+        <form
+          id="contact-form"
+          method="POST"
+          action="https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback"
+        >
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="your-name"
+            class="form__input"
+            required
+          />
+          <p></p>
+          <label for="subject">subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="your-subject"
+            class="form__input"
+          />
+          <p></p>
+          <div class="input-feedback name-error"></div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="your-email"
+            class="form__input"
+            placeholder="example@email.com"
+          />
+          <div class="input-feedback email-error"></div>
+          <label for="texts">Message</label>
+          <textarea
+            id="message"
+            name="your-message"
+            class="form__input"
+            required
+            aria-label="message texts"
+          ></textarea>
+          <div class="letter-count-wrapper">
+            <div class="input-feedback message-error"></div>
+            <div class="letter-count"></div>
+          </div>
+          <div class="user-feedback"></div>
+          <input
+            type="submit"
+            value="Send"
+            name="Submit"
+            class="cta"
+            id="submit"
+          />
+        </form>
+      </section>
+      <!-- <form id="contact-form">
         <div class="message-container"></div>
         <label for="name">Name</label>
         <input type="text" id="name" placeholder=" min 2 letters " />
@@ -42,7 +105,7 @@
         ></textarea>
         <div class="form-error texts-error"></div>
         <button type="submit">Send</button>
-      </form>
+      </form> -->
     </main>
     <footer>
       <a href="https://www.omdbapi.com/">Powered by OMDb API &copy;</a>

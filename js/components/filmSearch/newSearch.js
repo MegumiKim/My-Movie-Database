@@ -1,4 +1,5 @@
 import { createCard } from "../../createHTMLElements/createCardHTML.js";
+import { renderCards } from "../../createHTMLElements/renderCards.js";
 
 const titleInput = document.querySelector("#title-input");
 const yearInput = document.querySelector("#year-input");
@@ -19,12 +20,7 @@ export async function newSearch() {
     const response = await fetch(newURL);
     const json = await response.json();
     const films = json.Search;
-
-    container.innerHTML = "";
-    films.forEach((film) => {
-      const card = createCard(film);
-      container.append(card);
-    });
+    renderCards(container, films);
   } catch (e) {
     console.log(e);
   }
