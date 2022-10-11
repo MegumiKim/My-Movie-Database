@@ -1,4 +1,4 @@
-import { addToWatchList } from "./components/watchList/addToWatchList.js";
+// import { addToWatchList } from "./components/watchList/addToWatchList.js";
 import { createHtml } from "./createHTMLElements/createFilmHTML.js";
 import { displayMessage } from "./utils/displayMessage.js";
 const container = document.querySelector(".film-container");
@@ -14,7 +14,7 @@ async function fetchFilm() {
     const details = await response.json();
 
     createHtml(details, id);
-    addToWatchList();
+    // addToWatchList();
   } catch (error) {
     console.log(error);
     container.innerHTML = displayMessage(

@@ -1,13 +1,14 @@
 import { getWatchList } from "./components/watchList/getWatchList.js";
 import { displayMessage } from "./utils/displayMessage.js";
 import { createWatchCardHTML } from "./createHTMLElements/createWatchCardHTML.js";
-const myWatchList = getWatchList();
+
 const container = document.querySelector(".container");
 const userMessage = document.querySelector(".user-message");
 
 export function displayWatchList() {
+  const myWatchList = getWatchList();
+  container.innerHTML = "";
   if (myWatchList.length) {
-    container.innerHTML = "";
     myWatchList.forEach(async function (film) {
       const card = await createWatchCardHTML(film);
       container.append(card);
@@ -19,7 +20,7 @@ export function displayWatchList() {
     );
   }
 }
-
+displayWatchList();
 // myWatchList.forEach(async function (film) {
 //   const poster = await fetchPoster(film);
 //   container.innerHTML += `<div class="film">
@@ -32,5 +33,3 @@ export function displayWatchList() {
 
 //   removeFromWatchList();
 // });
-
-displayWatchList();

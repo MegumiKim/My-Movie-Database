@@ -1,3 +1,5 @@
+import { createElement } from "./createElement.js";
+import { addToWatchLists } from "../components/watchList/addToWatchList.js";
 // import { createElement } from "./createElement.js";
 const container = document.querySelector(".film-container");
 
@@ -29,13 +31,23 @@ export function createHtml(details, id) {
                           <div>
                           <h2>Actor</h2>
                           <p>${details.Actors}</p>
-                          </div>
-                          <div class='add-to-watch'>
-                          <i class="fa-solid fa-circle-plus" data-id='${id}' data-name='${details.Title}'></i>
-                          <p>Add to Watch List</p></div>
-                          </div></div></div>
-                          <p class='plot'>${details.Plot}</p>
-                          `;
+                          </div>`;
+  // <div class='add-to-watch'>
+  const addBtn = createElement(
+    "button",
+    "add-btn",
+    '<i class="fa-solid fa-circle-plus"></i>'
+  );
+  addBtn.setAttribute("data-id", id);
+  addBtn.setAttribute("data-name", details.Title);
+  addBtn.addEventListener("click", addToWatchLists);
+  const plot = createElement("p", "plot", details.Plot);
+  container.append(addBtn, plot);
+
+  // <button><i class="fa-solid fa-circle-plus" data-id='${id}' data-name='${details.Title}'></i></button>
+  // <p>Add to Watch List</p></div>
+  // </div></div></div>
+  // <p class='plot'>${details.Plot}</p>
 }
 
 // export function createFilmHTML(data) {
