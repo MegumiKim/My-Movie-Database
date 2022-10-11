@@ -7,7 +7,6 @@ export function handleClick(event) {
   console.log(this);
   const id = this.dataset.id;
   const name = this.dataset.name;
-  const poster = this.dataset.poster;
 
   const currentWatchList = getWatchList();
   const filmExist = currentWatchList.find(function (film) {
@@ -15,7 +14,7 @@ export function handleClick(event) {
   });
 
   if (!filmExist) {
-    const film = { id: id, name: name, poster: poster };
+    const film = { id: id, name: name };
     console.log(film);
 
     currentWatchList.push(film);
@@ -26,6 +25,6 @@ export function handleClick(event) {
   }
 }
 
-function saveItem(films) {
+export function saveItem(films) {
   localStorage.setItem("watch list", JSON.stringify(films));
 }

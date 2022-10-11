@@ -5,7 +5,7 @@ const myWatchList = getWatchList();
 const container = document.querySelector(".container");
 const userMessage = document.querySelector(".user-message");
 
-function displayWatchList() {
+export function displayWatchList() {
   if (myWatchList.length) {
     container.innerHTML = "";
     myWatchList.forEach(async function (film) {

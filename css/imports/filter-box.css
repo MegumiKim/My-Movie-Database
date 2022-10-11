@@ -51,6 +51,11 @@ select {
     gap: 1rem;
     justify-content: left;
   }
+
+  .filter-wrap,
+  .new-search-wrap {
+    margin: 2rem 10%;
+  }
   /* .search-btn {
     margin: 0;
   } */

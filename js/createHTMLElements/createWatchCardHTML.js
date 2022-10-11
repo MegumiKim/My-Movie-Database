@@ -15,8 +15,9 @@ export async function createWatchCardHTML(film) {
     film.name
   );
   const imgWrap = createElement("a", "img-wrap", undefined, [img]);
-  const removeBtn = createElement("button", "remove", "Remove", undefined);
   imgWrap.href = `film.html?id=${film.id}`;
+  const removeBtn = createElement("button", "remove", "Remove", undefined);
+  removeBtn.setAttribute("data-id", film.id);
   removeBtn.addEventListener("click", removeFromWatchList);
   const card = createElement("div", "card", undefined, [
     imgWrap,
