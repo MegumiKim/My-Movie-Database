@@ -1,4 +1,4 @@
-import { createCard } from "./createHTMLElements/createCardHTML";
+import { createCard } from "../../createHTMLElements/createCardHTML";
 import { fetchAPI } from "./fetchAPI";
 
 let cache = sessionStorage.getItem("cache");

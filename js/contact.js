@@ -1,4 +1,5 @@
 import { validateForm } from "./utils/validateForm.js";
+import { displayMessage } from "./utils/displayMessage.js";
 
 const form = document.querySelector("#contact-form");
 const message = document.querySelector(".message-container");

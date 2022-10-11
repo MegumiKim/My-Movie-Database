@@ -1,9 +1,9 @@
-import { newSearch } from "./utils/newSearch.js";
+import { newSearch } from "./components/filmSearch/newSearch.js";
 import {
   newestToOldest,
   oldestToNewest,
   sortFilms,
-} from "./utils/sortFuncs.js";
+} from "./components/filter/sortFuncs.js";
 import { toggleDisplay } from "./utils/toggleDisplay.js";
 import { fetchFilms } from "./displaySearchResults.js";
 import { renderCards } from "./createHTMLElements/renderCards.js";
@@ -11,7 +11,7 @@ import {
   filterFilms,
   filterNewerThan,
   filterOlderThan,
-} from "./utils/filterFilms.js";
+} from "./components/filter/filterFilms.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

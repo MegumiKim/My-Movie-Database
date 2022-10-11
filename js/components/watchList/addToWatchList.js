@@ -5,7 +5,7 @@ export function addToWatchList(event) {
   button.addEventListener("click", handleClick);
 }
 
-export function removeFromWatchList() {
-  const remove = document.querySelector("i");
-  remove.addEventListener("click", handleClick);
-}
+// export function removeFromWatchList() {
+//   const remove = document.querySelector("i");
+//   remove.addEventListener("click", handleClick);
+// }

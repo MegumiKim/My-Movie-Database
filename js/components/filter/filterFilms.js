@@ -1,4 +1,4 @@
-import { renderCards } from "../createHTMLElements/renderCards.js";
+import { renderCards } from "../../createHTMLElements/renderCards.js";
 
 const filterInput = document.querySelector("#filter-input");
 const yearFilter = document.querySelector("#filter-year");

@@ -1,4 +1,4 @@
-import { createCard } from "../createHTMLElements/createCardHTML.js";
+import { createCard } from "../../createHTMLElements/createCardHTML.js";
 
 const titleInput = document.querySelector("#title-input");
 const yearInput = document.querySelector("#year-input");
