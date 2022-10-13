@@ -3,7 +3,7 @@
 .filter-box {
   border: 1px solid black;
   margin: 2rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .hidden {
@@ -57,7 +57,4 @@ select {
   .filter-box {
     margin: 2rem 10%;
   }
-  /* .search-btn {
-    margin: 0;
-  } */
 }

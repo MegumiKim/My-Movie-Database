@@ -3,6 +3,7 @@
   background-size: cover;
   width: 100%;
   margin: 0 auto;
+  padding: 0;
 }
 
 .search-wrapper {
@@ -16,7 +17,6 @@
 
 .search {
   align-items: center;
-  width: 50%;
   margin: 0 auto;
 }
 .search label {
@@ -24,6 +24,13 @@
   align-self: flex-start;
 }
 
+#search-button {
+  margin: 0;
+  color: var(--black);
+  background: none;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+}
 #search {
   display: flex;
   align-items: center;
@@ -31,7 +38,12 @@
   height: 2em;
   border-radius: 5px;
   /* padding: 5px; */
-  width: 100%;
+  max-width: 100%;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: end;
 }
 
 @media (min-width: 1500px) {

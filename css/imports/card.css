@@ -11,6 +11,7 @@
 
 .card-img {
   max-width: 100%;
+  height: auto;
 }
 .card:hover {
   transform: scale(1.05);
