@@ -1,6 +1,6 @@
-import { createCard } from "../../createHTMLElements/createCardHTML.js";
+// import { createCard } from "../../createHTMLElements/createCardHTML.js";
 import { renderCards } from "../../createHTMLElements/renderCards.js";
-
+import { displayMessage } from "../../utils/displayMessage.js";
 const titleInput = document.querySelector("#title-input");
 const yearInput = document.querySelector("#year-input");
 const typeSelect = document.querySelector("#genre-select");
@@ -20,7 +20,13 @@ export async function newSearch() {
     const response = await fetch(newURL);
     const json = await response.json();
     const films = json.Search;
-    renderCards(container, films);
+
+    if (!films) {
+      container.innerHTML = displayMessage("error", "No Film Found");
+      return;
+    } else {
+      renderCards(container, films);
+    }
   } catch (e) {
     console.log(e);
   }

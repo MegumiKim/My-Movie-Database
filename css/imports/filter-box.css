@@ -46,6 +46,10 @@ select {
   height: 2rem;
 }
 
+#filter-year,
+#filter-input {
+  flex: 1;
+}
 /* .input-text,
 #genre-select {
   padding: 0 1rem;

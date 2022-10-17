@@ -1,15 +1,19 @@
 import { renderCards } from "../../createHTMLElements/renderCards.js";
+import { displayMessage } from "../../utils/displayMessage.js";
 
 const filterInput = document.querySelector("#filter-input");
 const yearFilter = document.querySelector("#filter-year");
 const container = document.querySelector(".container");
 
 export function filterFilms(films) {
-  console.log(films);
   let filteredFilms = films.filter((film) =>
     film.Title.toLowerCase().includes(filterInput.value.toLowerCase())
   );
-  renderCards(container, filteredFilms);
+  if (filteredFilms.length) {
+    renderCards(container, filteredFilms);
+  } else {
+    container.innerHTML = displayMessage("error", "Ooops, no results");
+  }
 }
 
 export function filterNewerThan(films) {
