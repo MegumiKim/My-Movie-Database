@@ -18,6 +18,9 @@ main {
   background-color: var(--color_yellow);
   padding: 0 3rem 3rem 3rem;
 }
+.search-results-main {
+  padding: 0 1rem 3rem 1rem;
+}
 /* .watch-list-main {
   padding: 0 5%;
 } */
@@ -51,8 +54,9 @@ input {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   max-height: 1.5rem;
-  width: 50%;
+  width: 80%;
 }
+/* #search, */
 #submit {
   width: auto;
   max-width: 100%;
