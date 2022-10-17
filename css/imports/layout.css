@@ -9,10 +9,18 @@ body {
   /* max-width: 1000px; */
 }
 
+/* section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
 main {
   background-color: var(--color_yellow);
-  padding: 5%;
+  padding: 0 5%;
 }
+/* .watch-list-main {
+  padding: 0 5%;
+} */
 footer {
   background: white;
   text-align: center;
@@ -47,7 +55,7 @@ input {
 
 .container-wrap {
   margin: auto;
-  padding: 0 5%;
+  /* padding: 0 5%; */
 }
 .container {
   padding: 1rem 2rem;

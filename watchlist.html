@@ -9,7 +9,6 @@
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Hotjar Tracking Code for https://funny-boba-e7553f.netlify.app -->
     <!-- Hotjar Tracking Code for MMdb -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -35,17 +34,20 @@
       <div class="menu-btn"><div class="menu-btn__burger"></div></div>
       <nav>
         <a href="/">Home</a>
-        <a href="watchlist.html">My Watch List</a>
+        <a href="watchlist.html" class="current">My Watch List</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
-    <main>
+    <main class="watch-list-main">
       <a class="go-back-btn" href="javascript:history.back()" alt="go back"
         ><i class="fas fa-chevron-left"></i
       ></a>
       <h1>My Watch List</h1>
+
       <div class="user-message"></div>
-      <div class="container"></div>
+      <div class="container">
+        <i class="fa-solid fa-spinner"></i>
+      </div>
     </main>
     <footer>
       <a href="https://www.omdbapi.com/">Powered by OMDb API &copy;</a>
