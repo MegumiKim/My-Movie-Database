@@ -16,7 +16,7 @@ body {
 } */
 main {
   background-color: var(--color_yellow);
-  padding: 0 5%;
+  padding: 0 3rem 3rem 3rem;
 }
 /* .watch-list-main {
   padding: 0 5%;
@@ -51,6 +51,11 @@ input {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   max-height: 1.5rem;
+  width: 50%;
+}
+#submit {
+  width: auto;
+  max-width: 100%;
 }
 
 .container-wrap {
