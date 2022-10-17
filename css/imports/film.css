@@ -57,15 +57,23 @@
 }
 
 h2 {
-  text-align: right;
+  /* text-align: right; */
   font-size: 1.5rem;
   padding-right: 10%;
 }
 
-h1 {
+.add-to-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.add-to-h2 {
+  padding-right: 0;
+}
+/* h1 {
   margin: 0;
   font-size: 3em;
-}
+} */
 
 @media (min-width: 800px) {
   .film-container {

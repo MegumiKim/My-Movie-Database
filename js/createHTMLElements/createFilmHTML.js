@@ -42,7 +42,10 @@ export function createHtml(details, id) {
   addBtn.setAttribute("data-id", id);
   addBtn.setAttribute("data-name", details.Title);
   addBtn.addEventListener("click", addToWatchLists);
-  const addToWrap = createElement("h2", "add-to-wrap", "Add To Watch List", [
+
+  const addToH2 = createElement("h2", "add-to-h2", "Add To Watch List");
+  const addToWrap = createElement("div", "add-to-wrap", undefined, [
+    addToH2,
     addBtn,
   ]);
   const plot = createElement("p", "plot", details.Plot);

@@ -2,7 +2,7 @@ form {
   max-width: 400px;
   margin: auto;
   background-color: white;
-  padding: 1em 4em;
+  padding: 1em 8%;
   border-radius: 10px;
   display: flex;
   flex-flow: column wrap;
@@ -35,21 +35,22 @@ label {
 
 form p {
   font-size: 0.7em;
-  text-align: right;
+
   margin-bottom: 0;
 }
 
 .form__input {
-  width: 100%;
+  /* width: 100%; */
   display: block;
-  margin: 0 auto 0 auto;
+  /* margin: 0 auto 0 auto; */
   border-style: solid;
   padding: 2px 10px;
   border: none;
   border-bottom: 2px solid lightgrey;
 }
 
-input:focus::placeholder {
+input:focus::placeholder,
+textarea:focus::placeholder {
   color: transparent;
 }
 
@@ -75,4 +76,28 @@ label {
   justify-content: center;
   max-width: 500px;
   margin: auto;
+}
+
+/* input:invalid {
+  border: 2px dashed red;
+} */
+
+input:focus:valid {
+  border: 2px solid green;
+}
+textarea:focus,
+input:focus {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 246, 192),
+    rgb(250, 230, 141)
+  );
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px rgb(201, 51, 51);
+}
+
+input:focus:invalid {
+  box-shadow: none;
 }

@@ -22,15 +22,3 @@ export function displayWatchList() {
   }
 }
 displayWatchList();
-// myWatchList.forEach(async function (film) {
-//   const poster = await fetchPoster(film);
-//   container.innerHTML += `<div class="film">
-//                           <img class='image' src='${poster}' /img>
-//                           <h4>${film.name}</h4>
-//                           <div class='remove-box'>
-//                           <i class="fa-solid fa-circle-plus" data-id='${film.id}'></i>
-//                           Remove</div>
-//                           </div>`;
-
-//   removeFromWatchList();
-// });

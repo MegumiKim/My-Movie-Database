@@ -1,9 +1,9 @@
 import { getWatchList } from "./getWatchList.js";
-import { saveItem } from "./handleClick.js";
+// import { saveItem } from "./handleClick.js";
 
 export function addToWatchLists(event) {
-  //   this.innerHTML.classList.toggle("fa-circle-plus");
-  //   this.innerHTML.classList.toggle("fa-circle-minus");
+  toggleIcon(event.target);
+
   const id = this.dataset.id;
   const name = this.dataset.name;
 
@@ -18,9 +18,9 @@ export function addToWatchLists(event) {
     saveList(currentWatchList, "watch list");
     console.log(currentWatchList);
   } else {
-    const newWatchList = currentWatchList.filter((film) => film.id == id);
-    saveList(newWatchList, "watch list");
+    const newWatchList = currentWatchList.filter((film) => film.id != id);
     console.log(newWatchList);
+    saveList(newWatchList, "watch list");
   }
 }
 
@@ -28,6 +28,19 @@ export function saveList(items, name) {
   localStorage.setItem(name, JSON.stringify(items));
 }
 
+function toggleIcon(target) {
+  const h2 = document.querySelector(".add-to-h2");
+
+  target.classList.toggle("fa-circle-plus");
+  target.classList.toggle("fa-circle-minus");
+
+  if (h2.innerText === "Add To Watch List") {
+    h2.innerHTML = "Remove from Watch List";
+  } else {
+    h2.innerText = "Add To Watch List";
+  }
+  console.log(h2);
+}
 // import { handleClick } from "./handleClick.js";
 
 // export function addToWatchList(event) {

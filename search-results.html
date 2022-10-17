@@ -8,6 +8,22 @@
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Hotjar Tracking Code for MMdb -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3205434, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
     <script defer src="/js/searchResults.js" type="module"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>Search Results | MMdb</title>
@@ -33,19 +49,26 @@
         <div class="filter-sort-wrap hidden">
           <div class="filters">
             <div class="by-title">
-              <label for="filter-input">By Title</label>
+              <label class="filter-label" for="filter-input"
+                >Filter by Keyword</label
+              >
               <input type="text" name="" id="filter-input" />
-              <button class="filter-btn btn">Filter by keyword</button>
+              <button class="filter-btn btn">Filter</button>
             </div>
             <div class="by-year">
-              <label for="filter-year">Filter by year</label>
+              <label class="filter-label" for="filter-year"
+                >Filter by year</label
+              >
               <input type="text" name="" id="filter-year" />
-              <button class="newer-than-btn btn">Newer than</button>
-              <button class="older-than-btn btn">Older than</button>
+              <div class="btn-wrap">
+                <button class="newer-than-btn btn">Newer than</button>
+                <button class="older-than-btn btn">Older than</button>
+              </div>
             </div>
           </div>
           <div class="sorts">
-            <div class="sort">
+            <label class="filter-label">Sort by</label>
+            <div class="btn-wrap">
               <button class="sort-btn btn newest">Year &uparrow;</button>
               <button class="sort-btn btn oldest">Year &downarrow;</button>
               <button class="sort-btn btn aToZ">A &RightArrow; Z</button>
@@ -61,23 +84,29 @@
           <h2>Run New Search</h2>
         </div>
         <div class="new-search-field hidden">
-          <label for="title-input">*Title</label>
-          <input
-            type="text"
-            class="input-text"
-            id="title-input"
-            place-holder="*required"
-          />
-          <label for="year-input">Year</label>
-          <input type="text" class="input-text" id="year-input" />
-          <label for="genre-select">Genre</label>
-          <select name="genre" id="genre-select">
-            <option value="" disabled selected>Select Category</option>
-            <option value="">All</option>
-            <option value="movie">Movie</option>
-            <option value="series">Series</option>
-            <option value="episode">Episode</option>
-          </select>
+          <div>
+            <label class="filter-label" for="title-input">*Title</label>
+            <input
+              type="text"
+              class="input-text"
+              id="title-input"
+              place-holder="*required"
+            />
+          </div>
+          <div>
+            <label class="filter-label" for="year-input">Year</label>
+            <input type="text" class="input-text" id="year-input" />
+          </div>
+          <div>
+            <label class="filter-label" for="genre-select">Type</label>
+            <select name="select" id="genre-select">
+              <option value="" disabled selected>Select Category</option>
+              <option value="">All</option>
+              <option value="movie">Movie</option>
+              <option value="series">Series</option>
+              <option value="episode">Episode</option>
+            </select>
+          </div>
           <button class="search-btn btn">Search</button>
         </div>
       </div>

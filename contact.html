@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hotjar Tracking Code for https://funny-boba-e7553f.netlify.app -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3164312, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <script defer src="/js/contact.js" type="module"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <title>MMDb | Contact</title>
   </head>
@@ -22,9 +39,10 @@
         <h1>Contact</h1>
         <div class="contact-greetings">
           <p>Hello film lovers!</p>
-          <p>Please send feedback/suggestion for future improvements.</p>
+          <p>Shoot me some suggestions for future improvements of the site.</p>
           <p>
-            Or what's your favorite movie? I would LOVE to hear from you :-)
+            Remember also to recommend me your favorite movie. I would LOVE to
+            hear from you :-)
           </p>
         </div>
       </section>
@@ -34,15 +52,15 @@
           method="POST"
           action="https://kimuramegumi.site/SimplyNatural/wp-json/contact-form-7/v1/contact-forms/79/feedback"
         >
-          <label for="name">Name</label>
+          <label for="name">*Name</label>
           <input
             type="text"
             id="name"
             name="your-name"
             class="form__input"
             required
+            minlength="3"
           />
-          <p></p>
           <label for="subject">subject</label>
           <input
             type="text"
@@ -50,7 +68,6 @@
             name="your-subject"
             class="form__input"
           />
-          <p></p>
           <div class="input-feedback name-error"></div>
           <label for="email">Email</label>
           <input
@@ -61,19 +78,18 @@
             placeholder="example@email.com"
           />
           <div class="input-feedback email-error"></div>
-          <label for="texts">Message</label>
+          <label for="texts">*Message (min 10 characters)</label>
           <textarea
             id="message"
             name="your-message"
             class="form__input"
             required
+            minlength="10"
             aria-label="message texts"
+            placeholder="Any thought?"
           ></textarea>
-          <div class="letter-count-wrapper">
-            <div class="input-feedback message-error"></div>
-            <div class="letter-count"></div>
-          </div>
           <div class="user-feedback"></div>
+          <p>* required fields</p>
           <input
             type="submit"
             value="Send"
@@ -83,33 +99,9 @@
           />
         </form>
       </section>
-      <!-- <form id="contact-form">
-        <div class="message-container"></div>
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder=" min 2 letters " />
-        <div class="form-error name-error"></div>
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder=" min 10 letters" />
-        <div class="form-error subject-error"></div>
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder=" example@email.com" />
-        <div class="form-error email-error"></div>
-        <label for="address">Address</label>
-        <input type="address" id="address" placeholder=" min 25 letters" />
-        <div class="form-error address-error"></div>
-        <label for="texts">Message</label>
-        <textarea
-          type="text"
-          id="texts"
-          placeholder=" min 5 letters"
-        ></textarea>
-        <div class="form-error texts-error"></div>
-        <button type="submit">Send</button>
-      </form> -->
     </main>
     <footer>
       <a href="https://www.omdbapi.com/">Powered by OMDb API &copy;</a>
     </footer>
-    <script src="/js/contact.js" type="module"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@ const yearFilter = document.querySelector("#filter-year");
 const container = document.querySelector(".container");
 
 export function filterFilms(films) {
+  console.log(films);
   let filteredFilms = films.filter((film) =>
     film.Title.toLowerCase().includes(filterInput.value.toLowerCase())
   );

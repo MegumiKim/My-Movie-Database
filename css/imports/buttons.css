@@ -8,7 +8,14 @@ button,
   padding: 0.5rem 1rem;
   margin: 0.5rem 1rem;
 }
+#submit,
+.search-btn {
+  margin-top: 2rem;
+}
 
+#submit:hover {
+  background-color: grey;
+}
 /* go back */
 .go-back-btn {
   font-size: 1.5rem;
@@ -16,13 +23,30 @@ button,
   display: block;
 }
 
+/* search btn */
+.fa-search:hover {
+  color: grey;
+}
+
 /* filter/sort btn */
 
+/* .filter-btn {
+  display: block;
+  place-self: right;
+} */
+
+.btn-wrap {
+  display: flex;
+}
 .sort-btn {
   background: none;
   font-weight: bold;
   color: var(--black);
-  border: 3px solid var(--black);
+  background-color: #fff;
+  /* border: 3px solid var(--black); */
+}
+.sort-btn:hover {
+  border: 1px var(--black) solid;
 }
 .show-filters-btn,
 .show-new-search-btn {
@@ -110,5 +134,9 @@ button,
 @media (min-width: 1000px) {
   .menu-btn {
     display: none;
+  }
+
+  .search-btn {
+    margin-top: 0;
   }
 }

@@ -3,25 +3,39 @@
 .filter-box {
   border: 1px solid black;
   margin: 2rem;
-  /* padding: 1rem; */
+  padding: 1rem;
 }
 
 .hidden {
   display: none;
+  flex-direction: column;
 }
 
-.filters,
-.new-search-field {
-  /* display: flex; */
-  padding: 1rem;
+.filter-label {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.sorts,
+.filters {
+  display: flex;
+  padding: 2rem;
   flex-direction: column;
   max-width: 100%;
+  flex-wrap: wrap;
+}
+.new-search-field {
+  padding: 2rem;
+  flex-direction: column;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .sorts {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center; */
+  padding-top: 5%;
+  border-top: 1px solid var(--black);
 }
 
 select {
@@ -45,16 +59,32 @@ select {
   display: flex;
 }
 @media (min-width: 800px) {
-  .filters,
+  /* .filters, */
   .new-search-field {
     flex-direction: row;
     gap: 1rem;
     justify-content: left;
   }
-
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .filter-label {
+    margin-top: 0;
+  }
+  .by-year,
+  .by-title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
   /* .filter-wrap,
   .new-search-wrap { */
   .filter-box {
     margin: 2rem 10%;
+  }
+  .sorts {
+    flex-direction: row;
   }
 }
