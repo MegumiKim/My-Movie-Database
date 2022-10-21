@@ -7,13 +7,20 @@ const olderThan = document.querySelector("#older-than");
 const container = document.querySelector(".container");
 const type = document.querySelector("#type");
 
-export function filterFilms(films) {
+export function filterFilms() {
+  let cache = sessionStorage.getItem("cache");
+  cache = cache ? JSON.parse(cache) : {};
+  let films = [];
+  films = cache[searchTerm];
+
+  console.log(films);
   let filteredFilms = films;
 
   if (filterInput.value) {
-    filteredFilms = films.filter((film) =>
+    filteredFilms = filteredFilms.filter((film) =>
       film.Title.toLowerCase().includes(filterInput.value.toLowerCase())
     );
+    console.log(filteredFilms);
   }
 
   if (newerThan.value) {

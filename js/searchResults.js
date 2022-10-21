@@ -1,4 +1,3 @@
-// import { newSearch } from "./components/filmSearch/newSearch.js";
 import {
   newestToOldest,
   oldestToNewest,
@@ -15,11 +14,10 @@ import { jumpToSearchResults } from "./components/filmSearch/jumpToSearchResults
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const searchTerm = params.get("search");
-const searchBtn = document.querySelector("#search-button");
-// const newSearchField = document.querySelector(".new-search-field");
 const filterSortWrap = document.querySelector(".filter-sort-wrap");
-// const filters = document.querySelector(".filters");
 const container = document.querySelector(".container");
+// const searchBtn = document.querySelector("#search-button");
+// const filters = document.querySelector(".filters");
 
 let cache = sessionStorage.getItem("cache");
 cache = cache ? JSON.parse(cache) : {};
@@ -41,7 +39,7 @@ document
 
 document
   .querySelector(".filter-btn")
-  .addEventListener("click", () => filterFilms(films));
+  .addEventListener("click", () => filterFilms());
 
 // filter films by year
 
