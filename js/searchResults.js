@@ -39,7 +39,7 @@ document
 
 document
   .querySelector(".filter-btn")
-  .addEventListener("click", () => filterFilms());
+  .addEventListener("click", () => filterFilms(cache, searchTerm));
 
 // filter films by year
 

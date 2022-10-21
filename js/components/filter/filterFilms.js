@@ -7,9 +7,7 @@ const olderThan = document.querySelector("#older-than");
 const container = document.querySelector(".container");
 const type = document.querySelector("#type");
 
-export function filterFilms() {
-  let cache = sessionStorage.getItem("cache");
-  cache = cache ? JSON.parse(cache) : {};
+export function filterFilms(cache, searchTerm) {
   let films = [];
   films = cache[searchTerm];
 
@@ -17,7 +15,7 @@ export function filterFilms() {
   let filteredFilms = films;
 
   if (filterInput.value) {
-    filteredFilms = filteredFilms.filter((film) =>
+    filteredFilms = films.filter((film) =>
       film.Title.toLowerCase().includes(filterInput.value.toLowerCase())
     );
     console.log(filteredFilms);
