@@ -13,7 +13,7 @@
 
 .filter-label {
   margin-top: 1rem;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 }
 .sorts,
 .filters {
@@ -26,73 +26,72 @@
 .filters {
   padding-top: 0;
 }
-.new-search-field {
-  padding: 1rem;
-  flex-direction: column;
-  max-width: 100%;
-  flex-wrap: wrap;
-  padding-top: 0%;
-}
 
 .sorts {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center; */
-
-  border-top: 1px solid var(--black);
+  margin: 0 5%;
+  /* border-top: 1px solid var(--black); */
 }
 
 select {
   height: 2rem;
 }
 
-#filter-year,
+.year-filters {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 1rem;
+}
+
 #filter-input {
   flex: 1;
 }
-/* .input-text,
-#genre-select {
-  padding: 0 1rem;
-} */
-/* .search-btn {
-  margin: 1rem auto;
-  padding: 1rem 2rem;
-} */
-.filter-wrap h2,
+
+.by-title {
+  width: 100%;
+}
+/* .filter-wrap h2,
 .new-search-wrap h2 {
   text-align: left;
-}
+} */
 
 .h2-wrap {
   display: flex;
 }
 @media (min-width: 800px) {
-  /* .filters, */
-  .new-search-field {
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: left;
+  .by-year {
+    width: 90%;
   }
   .filters {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: baseline;
   }
   .filter-label {
     margin-top: 0;
   }
-  .by-year,
-  .by-title {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+
+  select {
+    width: 80%;
+    display: block;
   }
-  /* .filter-wrap,
-  .new-search-wrap { */
+
   .filter-box {
     margin: 2rem 10%;
+    flex-direction: row;
   }
   .sorts {
     flex-direction: row;
+    justify-content: end;
+  }
+  .filters {
+    display: flex;
+    flex-direction: row;
+  }
+  .filter {
+    flex-direction: column;
+    justify-content: flex-start;
+    /* flex: 1; */
   }
 }

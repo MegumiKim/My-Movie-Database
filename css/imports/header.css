@@ -33,7 +33,28 @@ nav {
   text-decoration: underline;
 }
 
+.header-icons {
+  display: flex;
+  position: relative;
+  /* transition: all 1s ease-in-out; */
+}
+.header-search {
+  display: none;
+  width: 100vw;
+  align-items: center;
+  position: absolute;
+  transform: translate(-70%, 50%);
+  padding: 30px;
+  padding-left: 30%;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
 @media (min-width: 1000px) {
+  .header-search {
+    justify-content: center;
+    transform: translate(-80%, 70%);
+    padding: 30px;
+  }
   .logo {
     font-size: 5rem;
   }

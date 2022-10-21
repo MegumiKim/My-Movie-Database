@@ -81,23 +81,3 @@ label {
 /* input:invalid {
   border: 2px dashed red;
 } */
-
-input:focus:valid {
-  border: 2px solid green;
-}
-textarea:focus,
-input:focus {
-  background-image: linear-gradient(
-    to right,
-    rgb(255, 246, 192),
-    rgb(250, 230, 141)
-  );
-}
-
-input:invalid {
-  box-shadow: 0 0 5px 1px rgb(201, 51, 51);
-}
-
-input:focus:invalid {
-  box-shadow: none;
-}

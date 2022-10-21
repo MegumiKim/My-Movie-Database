@@ -1,4 +1,4 @@
-import { newSearch } from "./components/filmSearch/newSearch.js";
+// import { newSearch } from "./components/filmSearch/newSearch.js";
 import {
   newestToOldest,
   oldestToNewest,
@@ -7,18 +7,16 @@ import {
 import { toggleDisplay } from "./utils/toggleDisplay.js";
 import { fetchFilms } from "./fetchFilms.js";
 import { renderCards } from "./createHTMLElements/renderCards.js";
-import {
-  filterFilms,
-  filterNewerThan,
-  filterOlderThan,
-} from "./components/filter/filterFilms.js";
+import { filterFilms } from "./components/filter/filterFilms.js";
 import { menuBtnFunc } from "./utils/menuBtn.js";
+import { searchBtnFunc } from "./utils/searchBtn.js";
+import { jumpToSearchResults } from "./components/filmSearch/jumpToSearchResults.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const searchTerm = params.get("search");
-const searchBtn = document.querySelector(".search-btn");
-const newSearchField = document.querySelector(".new-search-field");
+const searchBtn = document.querySelector("#search-button");
+// const newSearchField = document.querySelector(".new-search-field");
 const filterSortWrap = document.querySelector(".filter-sort-wrap");
 // const filters = document.querySelector(".filters");
 const container = document.querySelector(".container");
@@ -31,10 +29,10 @@ films = cache[searchTerm];
 // Show first results
 fetchFilms(cache, searchTerm);
 
+// new search
+jumpToSearchResults;
+
 // display filters/new search fields
-document
-  .querySelector(".show-new-search-btn")
-  .addEventListener("click", (event) => toggleDisplay(event, newSearchField));
 document
   .querySelector(".show-filters-btn")
   .addEventListener("click", (event) => toggleDisplay(event, filterSortWrap));
@@ -47,16 +45,16 @@ document
 
 // filter films by year
 
-document
-  .querySelector(".newer-than-btn")
-  .addEventListener("click", () => filterNewerThan(films));
+// document
+//   .querySelector(".newer-than-btn")
+//   .addEventListener("click", () => filterNewerThan(films));
 
-document
-  .querySelector(".older-than-btn")
-  .addEventListener("click", () => filterOlderThan(films));
+// document
+//   .querySelector(".older-than-btn")
+//   .addEventListener("click", () => filterOlderThan(films));
 
 // Run new search
-searchBtn.addEventListener("click", newSearch);
+// searchBtn.addEventListener("click", fetchFilms(cache, freshSearch.value));
 
 // Sort films
 document.querySelector(".newest").addEventListener("click", function () {
@@ -73,3 +71,12 @@ document.querySelector(".aToZ").addEventListener("click", function () {
   const sortedFilms = sortFilms(films);
   renderCards(container, sortedFilms);
 });
+
+// search.addEventListener("keypress", function (event) {
+//   if (event.keyCode === 13) {
+//     window.location.href = `/search-results.html?search=${this.value}`;
+//   }
+// });
+// searchBtn.addEventListener("click", function (event) {
+//   window.location.href = `/search-results.html?search=${search.value}`;
+// });

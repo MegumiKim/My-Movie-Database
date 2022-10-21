@@ -31,15 +31,90 @@
   <body>
     <header>
       <a href="/" class="logo">MMDb</a>
-      <div class="menu-btn"><div class="menu-btn__burger"></div></div>
-      <nav>
-        <a href="/">Home</a>
-        <a href="watchlist.html">My Watch List</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-icons">
+        <button id="search-btn">
+          <i
+            class="fas fa-search"
+            aria-hidden="false"
+            aria-label="search item"
+          ></i>
+        </button>
+        <div class="header-search">
+          <input
+            type="text"
+            class="input-text"
+            id="search"
+            placeholder="film title"
+          />
+          <button id="search-button" class="btn">Search</button>
+        </div>
+        <div class="menu-btn"><div class="menu-btn__burger"></div></div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="watchlist.html">My Watch List</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
     <main class="search-results-main">
       <div class="filter-box">
+        <div class="h2-wrap">
+          <button class="show-filters-btn">
+            <i class="fa-solid fa-circle-plus"></i>
+          </button>
+          <h2>Filter films</h2>
+        </div>
+        <div class="filter-sort-wrap hidden">
+          <div class="filters">
+            <div class="by-title filter">
+              <label class="filter-label" for="filter-input"
+                >Title Keyword</label
+              >
+              <input type="text" name="" id="filter-input" />
+            </div>
+            <div class="year-filters">
+              <div class="by-year filter">
+                <label class="filter-label" for="filter-year">Newer than</label>
+                <input
+                  type="text"
+                  name=""
+                  id="newer-than"
+                  placeholder="ex: 1980"
+                />
+              </div>
+              <div class="by-year filter">
+                <label class="filter-label" for="filter-year">Older than</label>
+                <input
+                  type="text"
+                  name=""
+                  id="older-than"
+                  placeholder="ex: 2020"
+                />
+              </div>
+            </div>
+            <div class="by-type filter">
+              <label class="filter-label" for="type">Type</label>
+              <select name="select" id="type">
+                <option value="" disabled selected>Select Category</option>
+                <option value="">All</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+              </select>
+            </div>
+          </div>
+          <button class="filter-btn btn">Filter</button>
+        </div>
+      </div>
+      <div class="sorts">
+        <label class="filter-label">Sort by</label>
+        <div class="btn-wrap">
+          <button class="sort-btn btn newest">Year &uparrow;</button>
+          <button class="sort-btn btn oldest">Year &downarrow;</button>
+          <button class="sort-btn btn aToZ">A &RightArrow; Z</button>
+        </div>
+      </div>
+      <!-- <div class="filter-box">
         <div class="h2-wrap">
           <button class="show-filters-btn">
             <i class="fa-solid fa-circle-plus"></i>
@@ -66,37 +141,6 @@
               </div>
             </div>
           </div>
-          <div class="sorts">
-            <label class="filter-label">Sort by</label>
-            <div class="btn-wrap">
-              <button class="sort-btn btn newest">Year &uparrow;</button>
-              <button class="sort-btn btn oldest">Year &downarrow;</button>
-              <button class="sort-btn btn aToZ">A &RightArrow; Z</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="filter-box new-search-wrap">
-        <div class="h2-wrap">
-          <button class="show-new-search-btn">
-            <i class="fa-solid fa-circle-plus"></i>
-          </button>
-          <h2>Run New Search</h2>
-        </div>
-        <div class="new-search-field hidden">
-          <div>
-            <label class="filter-label" for="title-input">*Title</label>
-            <input
-              type="text"
-              class="input-text"
-              id="title-input"
-              place-holder="*required"
-            />
-          </div>
-          <div>
-            <label class="filter-label" for="year-input">Year</label>
-            <input type="text" class="input-text" id="year-input" />
-          </div>
           <div>
             <label class="filter-label" for="genre-select">Type</label>
             <select name="select" id="genre-select">
@@ -107,9 +151,17 @@
               <option value="episode">Episode</option>
             </select>
           </div>
-          <button class="search-btn btn">Search</button>
+          <div class="sorts">
+            <label class="filter-label">Sort by</label>
+            <div class="btn-wrap">
+              <button class="sort-btn btn newest">Year &uparrow;</button>
+              <button class="sort-btn btn oldest">Year &downarrow;</button>
+              <button class="sort-btn btn aToZ">A &RightArrow; Z</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </div> -->
+
       <div class="container-wrap">
         <div class="container">
           <i class="fa-solid fa-spinner"></i>
