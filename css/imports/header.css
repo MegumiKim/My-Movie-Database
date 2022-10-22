@@ -27,7 +27,7 @@ nav {
   right: -25px;
   background-color: #fff;
   padding: 10px;
-  /* width: 160px; */
+  width: max-content;
 }
 
 .current {
@@ -43,6 +43,7 @@ nav {
   display: none;
   width: 100vw;
   align-items: center;
+  justify-content: center;
   position: absolute;
   padding: 5% 0%;
   top: 60px;
