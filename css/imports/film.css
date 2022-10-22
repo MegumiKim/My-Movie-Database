@@ -61,6 +61,17 @@
   font-size: 1.5rem;
 }
 
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.text-wrapper p {
+  margin-top: 0;
+}
+.text-wrapper h2 {
+  margin-bottom: 5px;
+}
 .add-to-wrap {
   display: flex;
   justify-content: center;
@@ -82,6 +93,10 @@
     display: flex;
     flex-direction: row;
   }
+
+  .text-wrapper {
+    gap: 2rem;
+  }
   .title-wrapper {
     gap: 2rem;
   }
@@ -92,7 +107,16 @@
   .film-image {
     margin-right: 2rem;
   }
-  .description {
+  .description p,
+  .description h2 {
     text-align: left;
+  }
+  .text-wrapper p {
+    margin: auto;
+    margin-left: 0;
+  }
+  .text-wrapper h2 {
+    margin: auto;
+    margin-left: 0;
   }
 }
