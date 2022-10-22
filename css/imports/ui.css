@@ -19,15 +19,15 @@
   background: rgb(222, 248, 222);
 }
 
-.neutral {
+/* .neutral {
   border: var(--black) solid 2px;
   background: white;
-}
+} */
 
 .user-message {
-  margin-left: 20px;
-  max-width: 500px;
-  margin: auto;
+  /* margin-left: 20px; */
+  /* max-width: 500px; */
+  margin: 0 10%;
 }
 
 input:focus:valid {

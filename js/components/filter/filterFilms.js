@@ -8,36 +8,31 @@ const container = document.querySelector(".container");
 const type = document.querySelector("#type");
 
 export function filterFilms(cache, searchTerm) {
-  let films = [];
-  films = cache[searchTerm];
-
-  console.log(films);
-  let filteredFilms = films;
+  let films = cache[searchTerm];
 
   if (filterInput.value) {
-    filteredFilms = films.filter((film) =>
+    films = films.filter((film) =>
       film.Title.toLowerCase().includes(filterInput.value.toLowerCase())
     );
-    console.log(filteredFilms);
   }
 
   if (newerThan.value) {
-    filteredFilms = filteredFilms.filter((film) => film.Year > newerThan.value);
+    films = films.filter((film) => film.Year > newerThan.value);
   }
 
   if (olderThan.value) {
-    filteredFilms = filteredFilms.filter((film) => film.Year < olderThan.value);
-  }
-  console.log(filteredFilms);
-  if (type.value) {
-    filteredFilms = filteredFilms.filter((film) => film.Type === type.value);
+    films = films.filter((film) => film.Year < olderThan.value);
   }
 
-  if (!filteredFilms.length) {
+  if (type.value) {
+    films = films.filter((film) => film.Type === type.value);
+  }
+
+  if (!films.length) {
     container.innerHTML = displayMessage("error", "No Film Found");
     return;
   }
-  renderCards(container, filteredFilms);
+  renderCards(container, films);
 }
 
 // export function filterNewerThan(films) {

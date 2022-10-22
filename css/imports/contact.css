@@ -8,12 +8,10 @@ form {
   flex-flow: column wrap;
 }
 
-/* input,
-textarea {
-  height: 30px;
-  border-radius: 10px;
-  border: 2px solid var(--light-grey);
-} */
+.contact-greetings {
+  padding: 10%;
+  padding-top: 0;
+}
 
 textarea {
   height: 80px;

@@ -6,7 +6,8 @@ const container = document.querySelector(".film-container");
 export function createHtml(details, id) {
   document.title = "MMDb | " + details.Title;
   container.innerHTML = `<div class='img-description-wrap'>
-  <img class="film-image" src="${details.Poster}" alt="${details.Title}" /img>
+  <div class="film-image">
+  <img src="${details.Poster}" alt="${details.Title}" /img></div>
                           <div class='description'>
                           <div class='title-wrapper'>
                           <h1>${details.Title}</h1>
