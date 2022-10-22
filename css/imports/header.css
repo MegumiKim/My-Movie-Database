@@ -43,17 +43,15 @@ nav {
   width: 100vw;
   align-items: center;
   position: absolute;
-  transform: translate(-70%, 50%);
-  padding: 30px;
-  padding-left: 30%;
+  padding: 5% 0%;
+  top: 60px;
   background-color: #fff;
   transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1000px) {
   .header-search {
     justify-content: center;
-    transform: translate(-80%, 70%);
-    padding: 30px;
+    top: 100px;
   }
   .logo {
     font-size: 5rem;
