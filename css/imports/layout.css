@@ -89,3 +89,9 @@ input {
     max-width: 80%;
   }
 }
+
+@media (min-width: 1400px) {
+  main {
+    padding-top: 10%;
+  }
+}

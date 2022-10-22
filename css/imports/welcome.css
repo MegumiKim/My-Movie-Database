@@ -54,7 +54,7 @@
   .welcome {
     background-image: url("../../img/gr-stocks-q8P8YoR6erg-unsplash.webp");
     background-size: cover;
-    max-width: 1800px;
+    /* max-width: 1800px; */
     width: 100%;
     margin: 0 auto;
   }

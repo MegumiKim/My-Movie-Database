@@ -25,9 +25,9 @@ nav {
   position: absolute;
   top: 60px;
   right: -25px;
-  background-color: #fff;
   padding: 10px;
   width: max-content;
+  background-color: #fff;
 }
 
 .current {
@@ -50,6 +50,13 @@ nav {
   background-color: #fff;
   transition: all 0.5s ease-in-out;
 }
+.opacity-wrap {
+  background-color: #fff;
+  opacity: 0.7;
+  position: absolute;
+  height: 8%;
+  width: 100vw;
+}
 @media (min-width: 1000px) {
   .header-search {
     justify-content: center;
@@ -68,5 +75,23 @@ nav {
     display: flex;
     flex-direction: row;
     position: initial;
+    background-color: inherit;
+  }
+  .opacity-wrap {
+    height: 15%;
+  }
+}
+@media (min-width: 1400px) {
+  header {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+  }
+  .logo {
+    padding-left: 5%;
+  }
+
+  .header-icons {
+    margin-right: 5%;
   }
 }

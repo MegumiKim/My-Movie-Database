@@ -83,6 +83,7 @@ select {
   .sorts {
     flex-direction: row;
     justify-content: end;
+    margin: 0 10%;
   }
   .filters {
     display: flex;
