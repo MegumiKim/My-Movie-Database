@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MegumiKim/My-Movie-Database/issues"
   },
-  "homepage": "https://github.com/MegumiKim/My-Movie-Database#readme"
+  "homepage": "https://github.com/MegumiKim/My-Movie-Database#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
 }
