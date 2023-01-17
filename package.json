@@ -1,6 +1,6 @@
 {
   "name": "my-movie-database",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Personal mini project to practice calling API",
   "main": "index.js",
   "type": "module",
