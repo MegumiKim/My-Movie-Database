@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Build and deploy page
 
 on:
   # Runs on pushes targeting the default branch
@@ -20,8 +20,8 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+# Build and deploy the project
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -30,6 +30,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install Bootstrap
+        run:  npm -i bootstrap
+      - name: Build
+        run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
