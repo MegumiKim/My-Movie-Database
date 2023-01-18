@@ -35,7 +35,7 @@ function toggleIcon(target) {
   target.classList.toggle("fa-circle-minus");
 
   if (h2.innerText === "Add To Watch List") {
-    h2.innerHTML = "Remove from Watch List";
+    h2.innerText = "Remove from Watch List";
   } else {
     h2.innerText = "Add To Watch List";
   }

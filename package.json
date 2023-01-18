@@ -1,0 +1,47 @@
+{
+  "name": "my-movie-database",
+  "version": "1.0.1",
+  "description": "Personal mini project to practice calling API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run test-unit",
+    "test-unit": "jest",
+    "format": "prettier -w js/**/*.js",
+    "lint": "eslint js/**/*.js",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MegumiKim/My-Movie-Database.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MegumiKim/My-Movie-Database/issues"
+  },
+  "homepage": "https://github.com/MegumiKim/My-Movie-Database#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "eslint": "^8.32.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.2.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
+}
