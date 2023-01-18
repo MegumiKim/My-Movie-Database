@@ -35,6 +35,8 @@ jobs:
       - name: Install Bootstrap
         run:  npm i bootstrap
       - name: Build
+        run:  sass src/scss:dist/css
+      - name: Build
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v2
