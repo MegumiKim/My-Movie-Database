@@ -30,8 +30,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: initiate npm
+        run: npm init -y
       - name: Install Bootstrap
-        run:  npm -i bootstrap
+        run:  npm i bootstrap
       - name: Build
         run: npm run build
       - name: Setup Pages
