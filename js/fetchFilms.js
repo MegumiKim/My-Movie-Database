@@ -5,6 +5,7 @@ import { displayMessage } from "./utils/displayMessage.js";
 const container = document.querySelector(".container");
 
 export async function fetchFilms(cache, searchTerm) {
+
   try {
     const URL = `https://www.omdbapi.com/?apikey=f9d54557&s=${searchTerm}`;
 
@@ -12,7 +13,6 @@ export async function fetchFilms(cache, searchTerm) {
     if (!cache[searchTerm]) {
       const response = await fetch(URL);
       const json = await response.json();
-      // const json = fetchAPI(URL);
       films = json.Search;
 
       cache[searchTerm] = films;
