@@ -20,9 +20,7 @@ const container = document.querySelector(".container");
 let cache = sessionStorage.getItem("cache");
 cache = cache ? JSON.parse(cache) : {};
 let films = cache[searchTerm];
-console.log(films);
-// let films = [];
-// films = cache[searchTerm];
+
 
 // Show first results
 fetchFilms(cache, searchTerm);

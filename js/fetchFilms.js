@@ -5,7 +5,6 @@ import { displayMessage } from "./utils/displayMessage.js";
 const container = document.querySelector(".container");
 
 export async function fetchFilms(cache, searchTerm) {
-  console.log(searchTerm);
   try {
     const URL = `https://www.omdbapi.com/?apikey=f9d54557&s=${searchTerm}`;
 

@@ -1,10 +1,10 @@
 # [My Movie Database](https://dazzling-biscotti-0cc424.netlify.app)
 
-Personal mini project to practice calling API
+Personal hobby project
 
 ## Description
 
-- A simple website where a user can search a film by title
+- Search engine for film/series where a user can search by title
 - Return list of films and a detailed description of a specific film
 - A user can add/remove films in Watch List
 
@@ -13,7 +13,7 @@ Personal mini project to practice calling API
 - CSS
 - JS
 
-## Source
+## API Source
 https://www.omdbapi.com/
 
 ## Getting Started
@@ -21,7 +21,7 @@ https://www.omdbapi.com/
 Clone the repo:
 
 ```bash
-git clone git@github.com:MegumiKim/My-Movie-Database.git
+git clone https://github.com/MegumiKim/My-Movie-Database.git
 ```
 
 ## Contributing
